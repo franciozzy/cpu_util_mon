@@ -1,0 +1,44 @@
+CPU Utilisation Monitor
+=======================
+ Copyright 2015 (c) Citrix
+
+ Disclaimer
+ ----------
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, version 2 of the License only.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+
+ Description
+ -----------
+  This program continuously reads the CPU statistics from /proc/stats and
+  reports a 'cumd_t' struct via a shared memory file. By default, this is
+  updated every second and can be read by mmap()ing the file.
+
+  The 'example.c' provided code demonstrates how to read the shared file.
+
+
+ Compiling
+ ---------
+  # make
+  # make example
+
+
+ Usage
+ -----
+  Usage: ./cumd &
+
+
+ TODOs
+ -----
+  * Accept some command line parameters to override the defaults
+  * Daemonise properly by itself
+  * Provide some init-friendly scripts with the package
