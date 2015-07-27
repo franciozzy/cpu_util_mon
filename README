@@ -20,7 +20,7 @@ CPU Utilisation Monitor
  Description
  -----------
   This program continuously reads the CPU statistics from /proc/stats and
-  reports a 'cumd_t' struct via a shared memory file. By default, this is
+  reports a 'cum_t' struct via a shared memory file. By default, this is
   updated every second and can be read by mmap()ing the file.
 
   The 'example.c' provided code demonstrates how to read the shared file.
@@ -35,6 +35,7 @@ CPU Utilisation Monitor
  Usage
  -----
   Usage: ./cumd &
+         ./example
 
 
  TODOs
